@@ -1,1 +1,2 @@
-<h1>Esto es una prueba</h1>
+<h3>Index templates and document types with external config in Elasticsearch</h3>
+
