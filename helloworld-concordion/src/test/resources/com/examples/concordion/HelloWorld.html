@@ -1,0 +1,39 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+	
+		<h1>Primeros pasos con Concordion</h1>
+		
+		<h3>Ejemplo básico</h3>
+		
+		<p>
+			Dado una persona llamada <b concordion:set="#userName">Frodo Bolsón</b><br/>
+			el saludo deberá ser <span concordion:assertEquals="greetings(#userName)">Hola Frodo Bolsón!</span>
+		</p>
+		
+		<h3>Ejemplo con tabla</h3>
+		
+		<p>
+			<table concordion:execute="#greeting = greetings(#userNameInTable)">
+				<tr>
+					<th concordion:set="#userNameInTable">Nombre Usuario</th>
+					<th concordion:assertEquals="#greeting">Saludo del sistema</th>
+				</tr>
+				<tr>
+					<td>Arkady Darell</td>
+					<td>Hola Arkady Darell!</td>
+				</tr>
+				<tr>
+					<td>Raistlin Majere</td>
+					<td>Hola Raistlin Majere!</td>
+				</tr>
+				<tr>
+					<td>Myca Vykos</td>
+					<td>Adiós Myca Vykos!</td>
+				</tr>
+			</table>
+		</p>
+	</body>
+</html>
