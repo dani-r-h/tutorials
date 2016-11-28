@@ -1,5 +1,15 @@
 package com.autentia.tutoriales.es5;
 
-public class ES5TestIT {
+import static org.hamcrest.CoreMatchers.is;
 
+import org.elasticsearch.test.ESIntegTestCase;
+import org.junit.Test;
+
+public class ES5TestIT extends ESIntegTestCase{
+
+	@Test
+	public void shouldInitializeContextsSuccessfully() {
+		assertThat(true, is(true));
+	}
+	
 }
